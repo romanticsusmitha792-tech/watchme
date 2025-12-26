@@ -6,119 +6,181 @@
 <title>Romance Rani Susmitha – Official Fan Page</title>
 
 <style>
-body{
+/* RESET */
+*{
+    box-sizing:border-box;
     margin:0;
-    font-family: Arial, sans-serif;
-    background:#ffffff;
+    padding:0;
+}
+
+body{
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background:#fafafa;
     color:#333;
+    line-height:1.6;
 }
 
+/* HEADER */
 header{
+    padding:40px 20px;
     text-align:center;
-    padding:25px;
     background:linear-gradient(135deg,#b30059,#ff4d94);
-    color:white;
+    color:#fff;
 }
 
-.section{
-    max-width:900px;
+header h1{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:15px;
+    opacity:0.9;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1000px;
     margin:auto;
-    padding:30px 15px;
+    padding:40px 15px;
 }
 
+/* AD BOX */
 .ad-box{
-    background:#f3f3f3;
+    background:#f1f1f1;
+    border-radius:10px;
+    padding:15px;
     text-align:center;
-    padding:12px;
-    margin:25px 0;
-    border-radius:8px;
+    margin:35px 0;
+    font-size:14px;
+    color:#666;
 }
 
-.lure-img{
+/* SECTION TITLE */
+.section-title{
+    font-size:22px;
+    margin-bottom:18px;
+    text-align:center;
+}
+
+/* CONTENT CARD */
+.card{
+    background:#fff;
+    border-radius:14px;
+    padding:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.06);
+    margin-bottom:40px;
+}
+
+/* LORE IMAGE */
+.lore-img{
     width:100%;
     border-radius:12px;
     margin-bottom:15px;
 }
 
-.image-box img,
-.video-box video{
+/* MEDIA */
+.media img,
+.media video{
     width:100%;
     border-radius:12px;
-    margin-bottom:10px;
 }
 
+/* ENGAGEMENT TEXT */
 .engage{
     text-align:center;
     font-size:14px;
-    margin-top:10px;
+    margin-top:12px;
+    color:#777;
 }
 
+/* FOOTER */
 footer{
+    background:#ededed;
+    padding:25px 15px;
     text-align:center;
-    padding:20px;
     font-size:13px;
-    background:#f0f0f0;
+    color:#666;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+    header h1{
+        font-size:26px;
+    }
+    .section-title{
+        font-size:20px;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
     <h1>Romance Rani Susmitha</h1>
-    <p>Official Fan Page • Photos & Videos</p>
+    <p>Official Fan Page • Exclusive Photos & Videos</p>
 </header>
 
 <!-- TOP BANNER AD -->
-<div class="ad-box">
-    <!-- PASTE YOUR BANNER AD CODE HERE -->
-    Top Banner Ad
+<div class="container">
+    <div class="ad-box">
+        <!-- PASTE YOUR TOP BANNER AD CODE HERE -->
+        Top Banner Advertisement
+    </div>
 </div>
 
 <!-- PHOTO SECTION -->
-<section class="section">
+<div class="container">
+    <h2 class="section-title">Exclusive Photo</h2>
 
-    <!-- LORE / LURE IMAGE -->
-    <img class="lure-img" src="YOUR_LORE_IMAGE_URL">
+    <div class="card">
+        <img class="lore-img" src="YOUR_LORE_IMAGE_URL">
 
-    <!-- MAIN PHOTO -->
-    <div class="image-box">
-        <img src="YOUR_PHOTO_URL">
+        <div class="media">
+            <img src="YOUR_PHOTO_URL">
+        </div>
+
+        <div class="engage">❤️ Fans viewing now: 210</div>
     </div>
-
-    <div class="engage">❤️ Fans viewing now: 186</div>
-</section>
+</div>
 
 <!-- MID BANNER -->
-<div class="ad-box">
-    <!-- PASTE YOUR BANNER AD CODE HERE -->
-    Mid Banner Ad
+<div class="container">
+    <div class="ad-box">
+        <!-- PASTE YOUR MID BANNER AD CODE HERE -->
+        Mid Page Advertisement
+    </div>
 </div>
 
 <!-- VIDEO SECTION -->
-<section class="section">
+<div class="container">
+    <h2 class="section-title">Exclusive Video</h2>
 
-    <!-- LORE IMAGE -->
-    <img class="lure-img" src="YOUR_VIDEO_LORE_IMAGE_URL">
+    <div class="card">
+        <img class="lore-img" src="YOUR_VIDEO_LORE_IMAGE_URL">
 
-    <!-- VIDEO -->
-    <div class="video-box">
-        <video controls>
-            <source src="YOUR_VIDEO_URL" type="video/mp4">
-        </video>
+        <div class="media">
+            <video controls>
+                <source src="YOUR_VIDEO_URL" type="video/mp4">
+            </video>
+        </div>
     </div>
-
-</section>
-
-<!-- FOOTER BANNER -->
-<div class="ad-box">
-    <!-- PASTE YOUR BANNER AD CODE HERE -->
-    Footer Banner Ad
 </div>
 
+<!-- FOOTER BANNER -->
+<div class="container">
+    <div class="ad-box">
+        <!-- PASTE YOUR FOOTER BANNER AD CODE HERE -->
+        Footer Advertisement
+    </div>
+</div>
+
+<!-- FOOTER -->
 <footer>
     <p>© 2025 Romance Rani Susmitha</p>
-    <p>Fan-based website • All rights reserved</p>
+    <p>This is a fan-based website. All media rights belong to the creator.</p>
 </footer>
 
 </body>
