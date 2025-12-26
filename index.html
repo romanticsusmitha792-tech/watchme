@@ -8,62 +8,97 @@
 <style>
 /* RESET */
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
 body{
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family:'Segoe UI', Arial, sans-serif;
     background:#fafafa;
     color:#333;
     line-height:1.6;
 }
 
-/* HEADER */
+/* =========================
+   ROMANTIC HEADER WITH PHOTO
+   ========================= */
 header{
-    padding:40px 20px;
+    position:relative;
+    padding:90px 20px 70px;
     text-align:center;
-    background:linear-gradient(135deg,#b30059,#ff4d94);
     color:#fff;
+    background:
+        linear-gradient(
+            rgba(179,0,89,0.6),
+            rgba(255,77,148,0.7)
+        ),
+        url("YOUR_HEADER_BACKGROUND_IMAGE_URL");
+    background-size:cover;
+    background-position:center;
+    overflow:hidden;
+}
+
+header::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle at top, rgba(255,255,255,0.25), transparent 60%);
+}
+
+.header-content{
+    position:relative;
+    z-index:2;
+}
+
+.profile-pic{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid rgba(255,255,255,0.85);
+    box-shadow:0 12px 30px rgba(0,0,0,0.35);
+    margin-bottom:18px;
 }
 
 header h1{
-    font-size:32px;
-    margin-bottom:8px;
+    font-size:34px;
+    font-weight:600;
+    margin-bottom:10px;
+    text-shadow:0 4px 15px rgba(0,0,0,0.35);
+}
+
+.header-divider{
+    width:80px;
+    height:3px;
+    background:rgba(255,255,255,0.75);
+    border-radius:10px;
+    margin:18px auto;
 }
 
 header p{
-    font-size:15px;
-    opacity:0.9;
+    font-size:16px;
+    max-width:520px;
+    margin:auto;
+    opacity:0.95;
 }
 
-/* CONTAINER */
+/* =========================
+   LAYOUT
+   ========================= */
 .container{
     max-width:1000px;
     margin:auto;
     padding:40px 15px;
 }
 
-/* AD BOX */
-.ad-box{
-    background:#f1f1f1;
-    border-radius:10px;
-    padding:15px;
-    text-align:center;
-    margin:35px 0;
-    font-size:14px;
-    color:#666;
-}
-
-/* SECTION TITLE */
 .section-title{
-    font-size:22px;
-    margin-bottom:18px;
     text-align:center;
+    font-size:22px;
+    margin-bottom:20px;
 }
 
-/* CONTENT CARD */
+/* CARD */
 .card{
     background:#fff;
     border-radius:14px;
@@ -72,26 +107,35 @@ header p{
     margin-bottom:40px;
 }
 
-/* LORE IMAGE */
 .lore-img{
     width:100%;
     border-radius:12px;
     margin-bottom:15px;
 }
 
-/* MEDIA */
 .media img,
 .media video{
     width:100%;
     border-radius:12px;
 }
 
-/* ENGAGEMENT TEXT */
+/* ENGAGEMENT */
 .engage{
     text-align:center;
     font-size:14px;
-    margin-top:12px;
     color:#777;
+    margin-top:12px;
+}
+
+/* ADS */
+.ad-box{
+    background:#f1f1f1;
+    border-radius:10px;
+    padding:15px;
+    text-align:center;
+    margin:30px 0;
+    font-size:14px;
+    color:#666;
 }
 
 /* FOOTER */
@@ -105,11 +149,15 @@ footer{
 
 /* RESPONSIVE */
 @media(max-width:600px){
+    header{
+        padding:70px 15px 60px;
+    }
     header h1{
         font-size:26px;
     }
-    .section-title{
-        font-size:20px;
+    .profile-pic{
+        width:110px;
+        height:110px;
     }
 }
 </style>
@@ -117,17 +165,27 @@ footer{
 
 <body>
 
+<!-- HEADER -->
 <header>
-    <h1>Romance Rani Susmitha</h1>
+    <div class="header-content">
 
-    <div class="header-divider"></div>
+        <!-- PROFILE PHOTO -->
+        <img
+          src="YOUR_PROFILE_PHOTO_URL"
+          alt="Romance Rani Susmitha"
+          class="profile-pic">
 
-    <p>
-        Where love, emotion & romance come together.<br>
-        Official fan page for true admirers ❤️
-    </p>
+        <h1>Romance Rani Susmitha</h1>
+
+        <div class="header-divider"></div>
+
+        <p>
+            Where love, emotion & romance come together ❤️<br>
+            Official fan page for true admirers
+        </p>
+
+    </div>
 </header>
-
 
 <!-- TOP BANNER AD -->
 <div class="container">
@@ -142,17 +200,18 @@ footer{
     <h2 class="section-title">Exclusive Photo</h2>
 
     <div class="card">
+        <!-- LORE IMAGE -->
         <img class="lore-img" src="YOUR_LORE_IMAGE_URL">
 
         <div class="media">
             <img src="YOUR_PHOTO_URL">
         </div>
 
-        <div class="engage">❤️ Fans viewing now: 210</div>
+        <div class="engage">❤️ Fans viewing now: 214</div>
     </div>
 </div>
 
-<!-- MID BANNER -->
+<!-- MID BANNER AD -->
 <div class="container">
     <div class="ad-box">
         <!-- PASTE YOUR MID BANNER AD CODE HERE -->
@@ -165,6 +224,7 @@ footer{
     <h2 class="section-title">Exclusive Video</h2>
 
     <div class="card">
+        <!-- VIDEO LORE IMAGE -->
         <img class="lore-img" src="YOUR_VIDEO_LORE_IMAGE_URL">
 
         <div class="media">
@@ -175,7 +235,7 @@ footer{
     </div>
 </div>
 
-<!-- FOOTER BANNER -->
+<!-- FOOTER BANNER AD -->
 <div class="container">
     <div class="ad-box">
         <!-- PASTE YOUR FOOTER BANNER AD CODE HERE -->
