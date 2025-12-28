@@ -1,4 +1,4 @@
-x<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -15,7 +15,7 @@ body{
   line-height:1.6;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 header{
   padding:90px 20px 70px;
   text-align:center;
@@ -28,8 +28,7 @@ header{
 }
 
 .profile{
-  width:140px;
-  height:140px;
+  width:140px;height:140px;
   border-radius:50%;
   object-fit:cover;
   border:4px solid #fff;
@@ -46,7 +45,21 @@ header p{font-size:16px;max-width:520px;margin:auto;}
   margin:18px auto;border-radius:10px;
 }
 
-/* LAYOUT */
+/* ================= SCROLL TEASER ================= */
+.scroll-teaser{
+  text-align:center;
+  padding:35px 15px;
+  background:#fff;
+  font-size:18px;
+}
+.scroll-teaser span{
+  display:block;
+  margin-top:8px;
+  font-size:14px;
+  color:#777;
+}
+
+/* ================= LAYOUT ================= */
 .container{
   max-width:1000px;
   margin:auto;
@@ -62,7 +75,7 @@ header p{font-size:16px;max-width:520px;margin:auto;}
 .card{
   background:#fff;
   border-radius:14px;
-  padding:18px;
+  padding:20px;
   box-shadow:0 10px 25px rgba(0,0,0,.06);
   margin-bottom:35px;
 }
@@ -76,41 +89,53 @@ header p{font-size:16px;max-width:520px;margin:auto;}
   color:#666;
 }
 
-/* GALLERY */
+/* ================= GALLERY ================= */
 .gallery{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:15px;
 }
-
 .gallery img{
   width:100%;
   border-radius:12px;
 }
 
-/* VIDEO */
+/* ================= VIDEO ================= */
 .video-box video{
   width:100%;
   border-radius:12px;
 }
 
-/* BUTTONS */
-.btn{
-  display:inline-block;
-  padding:14px 26px;
+/* ================= TIMER BUTTON ================= */
+.timer-box{
+  text-align:center;
+  margin-top:20px;
+}
+
+.timer-btn{
+  padding:14px 30px;
   background:#ff2e7e;
   color:#fff;
-  text-decoration:none;
+  border:none;
   border-radius:30px;
-  margin:10px;
   font-size:15px;
+  cursor:not-allowed;
+  opacity:0.6;
 }
 
-.btn.secondary{
-  background:#0088cc;
+.timer-btn.active{
+  cursor:pointer;
+  opacity:1;
+  background:#00b96b;
 }
 
-/* FOOTER */
+.timer-text{
+  margin-top:10px;
+  font-size:14px;
+  color:#777;
+}
+
+/* ================= FOOTER ================= */
 footer{
   background:#ededed;
   padding:25px;
@@ -128,29 +153,31 @@ footer{
 
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 <header>
-  <img src="YOUR_PROFILE_PHOTO_URL" class="profile" alt="Romance Rani Susmitha">
+  <img src="YOUR_PROFILE_PHOTO_URL" class="profile">
   <h1>Romance Rani Susmitha</h1>
   <div class="divider"></div>
   <p>Love • Emotion • Romance<br>Official Fan Community ❤️</p>
 </header>
 
-<!-- TOP AD -->
-<div class="container">
-  <div class="ad-box">
-    <!-- TOP BANNER AD CODE -->
-    Top Banner Advertisement
-  </div>
+<!-- SCROLL PROMPT -->
+<div class="scroll-teaser">
+  ⬇️ Scroll Down to Explore Love
+  <span>Photos, videos & community waiting below</span>
 </div>
 
-<!-- ABOUT -->
+<!-- TOP AD -->
+<div class="container">
+  <div class="ad-box">Top Banner Advertisement</div>
+</div>
+
+<!-- EMOTIONAL TEXT -->
 <div class="container">
   <div class="card">
-    <h2 class="section-title">Welcome to Our Community</h2>
     <p style="text-align:center;">
-      A special place for true followers to enjoy romantic photos,
-      exclusive videos and stay connected together 💕
+      This page is specially made for people who believe in love, emotions
+      and beautiful connections. Keep scrolling ❤️
     </p>
   </div>
 </div>
@@ -169,50 +196,58 @@ footer{
 
 <!-- MID AD -->
 <div class="container">
-  <div class="ad-box">
-    <!-- MID BANNER AD CODE -->
-    Mid Page Advertisement
-  </div>
+  <div class="ad-box">Mid Page Advertisement</div>
 </div>
 
 <!-- VIDEO SECTION -->
 <div class="container">
-  <h2 class="section-title">Exclusive Videos</h2>
-
+  <h2 class="section-title">Exclusive Video</h2>
   <div class="card video-box">
     <video controls>
-      <source src="YOUR_VIDEO_URL_1" type="video/mp4">
-    </video>
-  </div>
-
-  <div class="card video-box">
-    <video controls>
-      <source src="YOUR_VIDEO_URL_2" type="video/mp4">
+      <source src="YOUR_VIDEO_URL" type="video/mp4">
     </video>
   </div>
 </div>
 
-<!-- COMMUNITY -->
+<!-- WHY JOIN -->
+<div class="container">
+  <div class="card">
+    <h2 class="section-title">Why Join This Community?</h2>
+    <p style="text-align:center;">
+      ❤️ Daily romantic updates<br>
+      🎥 Exclusive videos<br>
+      💬 Friendly fan community<br>
+      📢 Instant Telegram updates
+    </p>
+  </div>
+</div>
+
+<!-- TELEGRAM WITH TIMER -->
 <div class="container">
   <div class="card" style="text-align:center;">
     <h2 class="section-title">Join Our Telegram Community</h2>
 
-    <a href="YOUR_TELEGRAM_GROUP_LINK" class="btn">
-      💬 Join Telegram Group
-    </a>
+    <!-- GROUP -->
+    <div class="timer-box">
+      <button class="timer-btn" onclick="startTimer(this,'https://t.me/YOUR_GROUP_LINK')">
+        🔒 Please wait
+      </button>
+      <p class="timer-text">Wait 15 sec</p>
+    </div>
 
-    <a href="YOUR_TELEGRAM_CHANNEL_LINK" class="btn secondary">
-      📢 Join Telegram Channel
-    </a>
+    <!-- CHANNEL -->
+    <div class="timer-box">
+      <button class="timer-btn" onclick="startTimer(this,'https://t.me/YOUR_CHANNEL_LINK')">
+        🔒 Please wait
+      </button>
+      <p class="timer-text">Wait 15 sec</p>
+    </div>
   </div>
 </div>
 
 <!-- FOOTER AD -->
 <div class="container">
-  <div class="ad-box">
-    <!-- FOOTER BANNER AD CODE -->
-    Footer Advertisement
-  </div>
+  <div class="ad-box">Footer Advertisement</div>
 </div>
 
 <footer>
@@ -220,6 +255,34 @@ footer{
   <p>Fan-based community website</p>
 </footer>
 
+<!-- ================= TIMER SCRIPT ================= -->
+<script>
+function startTimer(button, link){
+  let timeLeft = 15;
+  let text = button.nextElementSibling;
+
+  button.disabled = true;
+  button.innerText = "⏳ Please wait...";
+  text.innerText = "Wait " + timeLeft + " sec";
+
+  let timer = setInterval(function(){
+    timeLeft--;
+    text.innerText = "Wait " + timeLeft + " sec";
+
+    if(timeLeft <= 0){
+      clearInterval(timer);
+      button.disabled = false;
+      button.classList.add("active");
+      button.innerText = "✅ Continue";
+      text.innerText = "You can continue now";
+
+      button.onclick = function(){
+        window.open(link, "_blank");
+      };
+    }
+  },1000);
+}
+</script>
+
 </body>
 </html>
-
