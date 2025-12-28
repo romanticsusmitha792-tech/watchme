@@ -1,0 +1,165 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Segoe UI',Arial,sans-serif;
+  background:#fafafa;
+  color:#333;
+  line-height:1.6;
+}
+
+/* HEADER */
+header{
+  padding:90px 20px 70px;
+  text-align:center;
+  color:#fff;
+  background:
+    linear-gradient(rgba(179,0,89,.65),rgba(255,77,148,.75)),
+    url("YOUR_HEADER_BG_URL");
+  background-size:cover;
+  background-position:center;
+}
+
+.profile{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid #fff;
+  box-shadow:0 12px 30px rgba(0,0,0,.35);
+  margin-bottom:15px;
+}
+
+header h1{
+  font-size:34px;
+  margin-bottom:10px;
+}
+
+header p{
+  font-size:16px;
+  max-width:520px;
+  margin:auto;
+}
+
+.divider{
+  width:80px;
+  height:3px;
+  background:rgba(255,255,255,.7);
+  margin:18px auto;
+  border-radius:10px;
+}
+
+/* SCROLL TEASER */
+.scroll-teaser{
+  text-align:center;
+  padding:35px 15px;
+  background:#fff;
+  font-size:18px;
+}
+.scroll-teaser span{
+  display:block;
+  margin-top:8px;
+  font-size:14px;
+  color:#777;
+}
+
+/* LAYOUT */
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:40px 15px;
+}
+
+.section-title{
+  text-align:center;
+  font-size:22px;
+  margin-bottom:20px;
+}
+
+.card{
+  background:#fff;
+  border-radius:14px;
+  padding:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,.06);
+  margin-bottom:35px;
+}
+
+.ad-box{
+  background:#f1f1f1;
+  padding:15px;
+  border-radius:10px;
+  text-align:center;
+  margin:30px 0;
+  color:#666;
+}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+}
+.gallery img{
+  width:100%;
+  border-radius:12px;
+}
+
+/* VIDEO */
+.video-box video{
+  width:100%;
+  border-radius:12px;
+}
+
+/* TIMER BUTTON */
+.timer-box{
+  text-align:center;
+  margin-top:20px;
+}
+
+.timer-btn{
+  padding:14px 30px;
+  background:#ff2e7e;
+  color:#fff;
+  border:none;
+  border-radius:30px;
+  font-size:15px;
+  cursor:not-allowed;
+  opacity:0.6;
+}
+
+.timer-btn.active{
+  cursor:pointer;
+  opacity:1;
+  background:#00b96b;
+}
+
+.timer-text{
+  margin-top:10px;
+  font-size:14px;
+  color:#777;
+}
+
+/* HELPERS */
+.center{
+  text-align:center;
+}
+.center-text{
+  text-align:center;
+}
+
+/* FOOTER */
+footer{
+  background:#ededed;
+  padding:25px;
+  text-align:center;
+  font-size:13px;
+  color:#666;
+}
+
+@media(max-width:600px){
+  header h1{font-size:26px;}
+  .profile{width:110px;height:110px;}
+}
